@@ -7,7 +7,8 @@ import java.util.Scanner;
 
 public class PersonController {
 
-    PersonService personService = new PersonServiceImpl();
+    private static final Scanner scanner = new Scanner(System.in);
+    private final PersonService personService = new PersonServiceImpl();
 
     public void startMenu() {
         System.out.print("""
@@ -16,7 +17,7 @@ public class PersonController {
                 2 - Войти.
                 0 - Выход.
                 """);
-        Scanner scanner = new Scanner(System.in);
+//        Scanner scanner = new Scanner(System.in);
         String choice = scanner.nextLine();
         switch (choice) {
             case "1":

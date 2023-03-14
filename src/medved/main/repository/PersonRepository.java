@@ -7,9 +7,13 @@ public interface PersonRepository {
 
     boolean create(Person person);
 
-    Person getPerson(Integer id);
+    Person getById(Long id);
+
+    Person getByUsername(String username);
 
     List<Person> getAllPersons();
 
-    Person update(Person person, Integer id);
+    Person update(Person person, Long id);
+
+    boolean deleteById(Long id);
 }
